@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const recipeSchema = new Schema({
-    name: {
+    title: {
       type: String,
       required: true, 
       unique: true 
@@ -19,7 +19,7 @@ const recipeSchema = new Schema({
     },
     dishType: {
       type: String,
-      enum: ['breakfast', 'main_course', 'soup', 'snack', 'drink', 'dessert or other']
+      enum: ['breakfast', 'main_course', 'soup', 'snack', 'drink', 'dessert', 'other']
     },
     image: {
       type: String,
